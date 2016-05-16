@@ -1,0 +1,30 @@
+﻿<UserControl x:Name="Boop" x:Class="PaintShopWPF.ShopPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PaintShopWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="750" Height="610" Loaded="UserControl_Loaded">
+    <Grid x:Name="shopHost" Background="#FFDFFBF9" IsManipulationEnabled="True" ClipToBounds="True" HorizontalAlignment="Left" VerticalAlignment="Top" SnapsToDevicePixels="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="610"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF2C7873" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" RadiusY="20" RadiusX="20" StrokeThickness="0" VerticalAlignment="Top" Width="730"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="555" Margin="0,55,0,0" VerticalAlignment="Top" Width="750" PanningMode="VerticalOnly">
+            <WrapPanel x:Name="elementsHost" Margin="0"/>
+        </ScrollViewer>
+        <Grid x:Name="paintType" HorizontalAlignment="Left" Height="45" Margin="40,10,0,0" VerticalAlignment="Top" Width="160" Background="#FF2C7873" MouseDown="paintType_MouseDown" MouseEnter="paintType_MouseEnter" MouseLeave="paintType_MouseLeave" MouseUp="paintType_MouseUp">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" Text="Тип краски" VerticalAlignment="Top" Height="25" FontSize="20" FontFamily="/PaintShopWPF;component/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+        </Grid>
+        <Grid x:Name="brandType" HorizontalAlignment="Left" Height="45" Margin="200,10,0,0" VerticalAlignment="Top" Width="160" Background="#FF2C7873" MouseLeave="brandType_MouseLeave" MouseDown="brandType_MouseDown" MouseEnter="brandType_MouseEnter" MouseUp="brandType_MouseUp">
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="7,10,0,0" TextWrapping="Wrap" Text="Производитель" VerticalAlignment="Top" Height="25" FontSize="20" FontFamily="/PaintShopWPF;component/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+        </Grid>
+        <WrapPanel x:Name="brandOptions" HorizontalAlignment="Left" Height="545" Margin="200,55,0,0" VerticalAlignment="Top" Width="160" Visibility="Hidden"/>
+        <WrapPanel x:Name="paintOptions" HorizontalAlignment="Left" Height="545" Margin="40,55,0,0" VerticalAlignment="Top" Width="160" Visibility="Hidden"/>
+
+    </Grid>
+</UserControl>

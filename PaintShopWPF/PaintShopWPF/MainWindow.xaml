@@ -1,0 +1,54 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaintShopWPF"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="Mwind" x:Class="PaintShopWPF.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="{x:Null}" AllowsTransparency="True" Loaded="Window_Loaded">
+    <Window.Effect>
+        <DropShadowEffect Direction="0" Opacity="0.7" Color="#FF424242" BlurRadius="10" ShadowDepth="0" RenderingBias="Quality"/>
+    </Window.Effect>
+
+    <Grid x:Name="GlobalHost">
+        <Rectangle Fill="#FF2C7873" HorizontalAlignment="Left" Height="77" Margin="10,10,0,0" VerticalAlignment="Top" Width="980" RadiusX="5" RadiusY="5" MouseDown="Rectangle_MouseDown"/>
+        <Rectangle Fill="#FFDFFBF9" HorizontalAlignment="Left" Height="610" Margin="10,80,0,0" VerticalAlignment="Top" Width="980"/>
+        <Rectangle x:Name="Exit_Button" Fill="#FF004445" HorizontalAlignment="Left" Height="35" Margin="935,25,0,0" RadiusY="18" RadiusX="18" VerticalAlignment="Top" Width="35" MouseEnter="Exit_Button_MouseEnter" MouseLeave="Exit_Button_MouseLeave" MouseDown="Exit_Button_MouseDown" MouseUp="Exit_Button_MouseUp" StrokeThickness="0"/>
+        <Rectangle Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="92,102,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="137"/>
+        <Label x:Name="mainLabel" Content="Главная" HorizontalAlignment="Left" Margin="118,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.154,0.064" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+        <Grid x:Name="host" HorizontalAlignment="Left" Height="610" Margin="10,80,0,0" VerticalAlignment="Top" Width="230" Background="#FF6FB98F">
+            <Grid x:Name="mainItem" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="230" Background="#FF6FB98F" MouseDown="mainItem_MouseDown" MouseEnter="mainItem_MouseEnter" MouseLeave="mainItem_MouseLeave" MouseUp="mainItem_MouseUp">
+                <Image x:Name="mainIcon" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Margin="10,10,0,0"/>
+                <Rectangle x:Name="mainRect" Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="85,21,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="132"/>
+                <Label x:Name="mainLabel1" Content="Главная" HorizontalAlignment="Left" Margin="109,23,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+            </Grid>
+            <Grid x:Name="shopItem" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="230" Background="#FF6FB98F" Margin="0,80,0,0" MouseDown="shopItem_MouseDown" MouseEnter="shopItem_MouseEnter" MouseLeave="shopItem_MouseLeave" MouseUp="shopItem_MouseUp">
+                <Image x:Name="shopIcon" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Margin="10,10,0,0"/>
+                <Rectangle x:Name="shopRect" Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="85,21,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="132"/>
+                <Label x:Name="shopLabel" Content="Магазин" HorizontalAlignment="Left" Margin="106,23,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+            </Grid>
+            <Grid x:Name="cartItem" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="230" Background="#FF6FB98F" Margin="0,160,0,0" MouseDown="cartItem_MouseDown" MouseEnter="cartItem_MouseEnter" MouseLeave="cartItem_MouseLeave" MouseUp="cartItem_MouseUp">
+                <Image x:Name="cartIcon" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Margin="10,10,0,0"/>
+                <Rectangle x:Name="cartRect" Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="85,21,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="132"/>
+                <Label x:Name="cartLabel" Content="Корзина" HorizontalAlignment="Left" Margin="107,23,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+            </Grid>
+            <Grid x:Name="contactItem" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="230" Background="#FF6FB98F" Margin="0,240,0,0" MouseDown="contactItem_MouseDown" MouseEnter="contactItem_MouseEnter" MouseLeave="contactItem_MouseLeave" MouseUp="contactItem_MouseUp">
+                <Image x:Name="contactIcon" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Margin="10,10,0,0"/>
+                <Rectangle x:Name="contactRect" Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="85,21,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="132"/>
+                <Label x:Name="contactLabel" Content="Помощь" HorizontalAlignment="Left" Margin="106,23,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+            </Grid>
+            <Grid x:Name="adminItem" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="230" Background="#FF6FB98F" Margin="0,320,0,0" MouseDown="adminItem_MouseDown" MouseEnter="adminItem_MouseEnter" MouseLeave="adminItem_MouseLeave" MouseUp="adminItem_MouseUp">
+                <Image x:Name="adminIcon" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="60" Margin="10,10,0,0"/>
+                <Rectangle x:Name="adminRect" Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="85,21,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="132"/>
+                <Label x:Name="adminLabel" Content="Админ." HorizontalAlignment="Left" Margin="113,23,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light" Foreground="#FFDFFBF9"/>
+            </Grid>
+            <Rectangle Fill="#FFDFFBF9" HorizontalAlignment="Left" Height="25" Margin="20,560,0,0" RadiusY="12" RadiusX="12" StrokeThickness="0" VerticalAlignment="Top" Width="190"/>
+            <Label x:Name="label" Content="Введите Ваше имя" HorizontalAlignment="Left" Margin="40,532,0,0" VerticalAlignment="Top" Foreground="#FF021C1E" FontSize="16" FontFamily="/PaintShopWPF;component/Fonts/#Ubuntu Light"/>
+            <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="25" Margin="40,560,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Background="#FFDFFBF9" BorderBrush="{x:Null}" BorderThickness="0" FontSize="16" Foreground="#FF004445" PreviewKeyUp="nameTextBox_PreviewKeyUp"/>
+        </Grid>
+        <Rectangle Fill="#FF004445" HorizontalAlignment="Left" Height="39" Margin="25,25,0,0" RadiusY="18" RadiusX="18" StrokeThickness="0" VerticalAlignment="Top" Width="390"/>
+        <Label x:Name="headLabel" Content="Paint Shop: Extended" HorizontalAlignment="Left" Margin="35,23,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="#FFDFFBF9" Height="44" FontFamily="/PaintShopWPF;component/bin/Debug/Fonts/#Ubuntu Light"/>
+        <Grid x:Name="Host" HorizontalAlignment="Left" Height="610" Margin="240,80,0,0" VerticalAlignment="Top" Width="750" Background="#FFDFFBF9"/>
+    </Grid>
+</Window>
